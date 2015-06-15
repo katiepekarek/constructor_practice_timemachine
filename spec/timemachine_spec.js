@@ -25,7 +25,7 @@ describe('properties', function() {
   });
 });
 
-describe('addPassengers', function() {
+describe('#addPassengers', function() {
   var tardis;
   beforeEach(function() {
     tardis = new timeMachine("Doctor", "blue", 100, 40);
@@ -41,6 +41,11 @@ describe('addPassengers', function() {
     tardis.addPassenger('Rory');
     expect(tardis.passengers).toEqual(['Amy', 'Rory']);
   });
+});
+
+describe('#passengerCount', function() {
+
+  var tardis = new timeMachine("Doctor", "blue", 100, 40);
 
   it('returns 0 when there are no passengers in the Time Machine instance', function() {
     var tardis = new timeMachine("Doctor", 'blue', 100, 40);
